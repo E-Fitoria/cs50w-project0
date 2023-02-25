@@ -1,0 +1,32 @@
+div {
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    text-align: center;
+    font-size: large;
+}
+
+.ImagenDiv{
+    background: url(../images/inicio.jpg) no-repeat;
+    /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
+    de las dimensiones y si usamos contain puede que la imagen no se muestre en toda la caja*/
+    background-size: cover;
+    margin: 25px;
+    height: 300px;
+    width: 900px;
+    /*Con esta propiedad hacemos que la imagen tengas esquinas redondeadas*/
+    border-radius: 25px;
+    /*creamos el efecto de sombra de la imagen*/
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
+    /*Ajustes para las fuentes*/
+    color: white;
+    font-family:monospace;
+}
+
+p{
+    font-size: large;
+    padding: 15px 90px;
+}
