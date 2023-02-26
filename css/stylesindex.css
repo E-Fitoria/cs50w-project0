@@ -1,32 +1,68 @@
-div {
-    width: 100%;
-    display: grid;
-    place-content: center;
-}
-
 h1{
     text-align: center;
+}
+
+p{
+    text-align: center;
     font-size: large;
+    margin: 15px 90px;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    padding: 2px 2px;
+}
+
+a:hover, a:active {
+    background-color: #343a40;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+img{
+    height: 300px;
+    width: 450px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
+}
+
+.divcentrado{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .ImagenDiv{
-    background: url(../images/inicio.jpg) no-repeat;
+    background: url(../images/imginicio.jpg) no-repeat;
     /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
     de las dimensiones y si usamos contain puede que la imagen no se muestre en toda la caja*/
     background-size: cover;
     margin: 25px;
     height: 300px;
     width: 900px;
+    opacity: 0.8;
     /*Con esta propiedad hacemos que la imagen tengas esquinas redondeadas*/
     border-radius: 25px;
     /*creamos el efecto de sombra de la imagen*/
     box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
     /*Ajustes para las fuentes*/
     color: white;
+}
+
+.tituloinicio{
+    text-align: center;
+    padding: 100px;
     font-family:monospace;
 }
 
-p{
-    font-size: large;
-    padding: 15px 90px;
+.contenedor{
+    display: flex;
+    justify-content: center;
+    text-align: top;
+}
+
+.img_espacios{
+    margin-right: 30px;
+    margin-bottom: 30px;
 }
