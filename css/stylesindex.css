@@ -49,6 +49,7 @@ y en este todas las imágenes tendrán el mismo tamaño y propiedades*/
 img{
     height: 300px;
     width: 450px;
+    margin: 25px;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
 }
@@ -85,6 +86,36 @@ img{
     box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
 }
 
+.img_acordeon_killer{
+    background: url(../images/asesino_del_acordeon.jpg) no-repeat;
+    /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
+    de las dimensiones y si usamos contain puede que la imagen no se muestre en toda la caja*/
+    background-size: cover;
+    margin: 25px;
+    height: 400px;
+    width: 900px;
+    opacity: 0.8;
+    /*Con esta propiedad hacemos que la imagen tengas esquinas redondeadas*/
+    border-radius: 25px;
+    /*creamos el efecto de sombra de la imagen*/
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
+}
+
+.img_loenes_somoza{
+    background: url(../images/leonesomoza.jpg) no-repeat;
+    /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
+    de las dimensiones y si usamos contain puede que la imagen no se muestre en toda la caja*/
+    background-size: contain;
+    margin: 25px;
+    height: 350px;
+    width: 535px;
+    opacity: 0.8;
+    /*Con esta propiedad hacemos que la imagen tengas esquinas redondeadas*/
+    border-radius: 25px;
+    /*creamos el efecto de sombra de la imagen*/
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
+}
+
 .titulo_inicio{
     text-align: center;
     padding: 100px;
@@ -96,7 +127,6 @@ horizontalmente usando la propiedad de display flex*/
 .contenedor{
     display: flex;
     justify-content: center;
-
 }
 
 /*com img_espacios lo usaremos para acomodar las primeras dos img utilizadas con contenedor
