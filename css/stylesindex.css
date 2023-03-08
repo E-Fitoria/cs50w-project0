@@ -1,18 +1,15 @@
-h1{
+*{
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6{
     padding-top: 20px;
-    padding-bottom: 20px;
     text-align: center;
 }
 
-div{
-    width: 100%;
-    display: flex;
-    justify-content: center; 
-}
-
-h2{
-    text-decoration: none;
+#titulo{
     padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -23,15 +20,7 @@ body{
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-p{
-    color: white;
-    text-align: left;
-    font-size: large;
-    margin: 15px 90px;
-}
-
 a:link, a:visited {
-    color: white;
     text-decoration: none;
     padding: 2px 2px;
 }
@@ -42,6 +31,23 @@ a:hover, a:active {
     background-color: #343a40;
     text-decoration: none;
     border-radius: 10px;
+}
+
+
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+p{
+    text-align: left;
+    font-size: large;
+    margin: 15px 90px;
+}
+
+iframe{
+    margin-bottom: 20px;
 }
 
 /*ajustamos los valores para img, ya que solo la usaremos para el apartado de anécdotas
@@ -68,7 +74,6 @@ img{
     /*creamos el efecto de sombra de la imagen*/
     box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
     /*Ajustes para las fuentes*/
-    color: white;
 }
 
 .img_mama_sara{
@@ -116,23 +121,14 @@ img{
     box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
 }
 
-.titulo_inicio{
-    text-align: center;
-    padding: 100px;
-    font-family:monospace;
-}
+/*el media screen sirve para ajustar las propiedades de la web a pantallas
+maás grandes o más pequeñas
 
-/*el contenedor nos servirá como un div para poder mostrar imagenes alineadas
-horizontalmente usando la propiedad de display flex*/
-.contenedor{
-    display: flex;
-    justify-content: center;
-}
-
-/*com img_espacios lo usaremos para acomodar las primeras dos img utilizadas con contenedor
-y margin bottom para dar un espacio con las otras dos imágenes de abajo que estarán dentro de otro
-contenedors*/
-.img_espacios{
-    margin-right: 30px;
-    margin-bottom: 30px;
+en este caso cuando la pantalla sea menor a 962px en la página de anécdotas usaremos para que se vea
+mejor las imágenes que nos redireccionan a otras páginas*/
+@media screen and (max-width: 962px){
+    div{
+        display: block;
+        text-align: center;
+    }
 }
