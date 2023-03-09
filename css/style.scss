@@ -1,16 +1,22 @@
+/*usamos una variable de color para poder modificar más fácil
+ya que la web solo usa color blanco para sus textos*/
+$color_de_estilo: white;
+
 *{
-    color: white;
+    color: $color_de_estilo;
 }
 
-h1, h2, h3, h4, h5, h6{
-    padding-top: 20px;
+/*creamos una clase placeholder para poner propiedades que se repiten en los 
+títulos*/
+%propiedades_titulos{    
+    padding-top: 15px;
     text-align: center;
 }
 
-#titulo{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+h2{
+    color:$color_de_estilo !important;
+    @extend %propiedades_titulos;
+    font-size: 30px !important;
 }
 
 /*esto lo saque de la pagina iugradients para hacer el fondo mas bonito*/
@@ -20,19 +26,54 @@ body{
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-a:link, a:visited {
+a{
     text-decoration: none;
     padding: 2px 2px;
+    
+    &:link, &:visited {
+        color: $color_de_estilo;
+    }
+
+    /*con backgraund color y border radius creamos un efecto de presionado en los apartados de la barra
+    de navegación*/
+    &:hover, &:active {
+        background-color: #343a40;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
 }
 
-/*con backgraund color y border radius creamos un efecto de presionado en los apartados de la barra
-de navegación*/
-a:hover, a:active {
-    background-color: #343a40;
-    text-decoration: none;
-    border-radius: 10px;
-}
 
+/*ejemplo de anidacion sass, este contenedor sirve para mostrar en la pagina de inicio*/
+.container_img_index{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+
+    .img_inicio{
+        background: url(../images/imginicio.jpg) no-repeat;
+        /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
+        de las dimensiones y si usamos contain puede que la imagen no se muestre en toda la caja*/
+        background-size: cover;
+        margin: 25px;
+        height: 300px;
+        width: 900px;
+        opacity: 0.8;
+        /*Con esta propiedad hacemos que la imagen tengas esquinas redondeadas*/
+        border-radius: 25px;
+        /*creamos el efecto de sombra de la imagen*/
+        box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
+        /*Ajustes para las fuentes*/
+    }
+    
+    #titulo{
+        @extend %propiedades_titulos;
+        padding-bottom: 20px;
+       
+    }
+    
+}
 
 div{
     width: 100%;
@@ -46,6 +87,7 @@ p{
     margin: 15px 90px;
 }
 
+/*lo usamos para el vídeo que mostramos en la historia del diablo en el lobo jack*/
 iframe{
     margin-bottom: 20px;
 }
@@ -60,22 +102,8 @@ img{
     box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
 }
 
-.img_inicio{
-    background: url(../images/imginicio.jpg) no-repeat;
-    /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
-    de las dimensiones y si usamos contain puede que la imagen no se muestre en toda la caja*/
-    background-size: cover;
-    margin: 25px;
-    height: 300px;
-    width: 900px;
-    opacity: 0.8;
-    /*Con esta propiedad hacemos que la imagen tengas esquinas redondeadas*/
-    border-radius: 25px;
-    /*creamos el efecto de sombra de la imagen*/
-    box-shadow: 0 0 20px rgba(0, 0, 0,0.5);
-    /*Ajustes para las fuentes*/
-}
-
+/*creamos una clase para mostrar la imagen de mama sara ya que esta tendrá propiedes 
+únicas que no se repiten en otras imágenes*/
 .img_mama_sara{
     background: url(../images/mamasara.jpg) no-repeat;
     /*con cover la imagen se adapta al tamanio de la caja, parte de la imagen no se ve, esto depende
