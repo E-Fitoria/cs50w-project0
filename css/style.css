@@ -12,18 +12,18 @@ títulos*/
   text-align: center;
 }
 
-h2 {
-  color: white !important;
-  font-size: 30px !important;
-}
-
-/*esto lo saque de la pagina iugradients para hacer el fondo mas bonito*/
 body {
   background: #141E30; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #243B55, #141E30); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+h2 {
+  color: white !important;
+  font-size: 30px !important;
+}
+
+/*esto lo saque de la pagina iugradients para hacer el fondo mas bonito*/
 a {
   text-decoration: none;
   padding: 2px 2px;
@@ -64,7 +64,7 @@ a:hover, a:active {
   padding-bottom: 20px;
 }
 
-div {
+.contenedor_img {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -138,15 +138,28 @@ img {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/*el media screen sirve para ajustar las propiedades de la web a pantallas
-maás grandes o más pequeñas
+table {
+  margin-top: 20px;
+}
 
-en este caso cuando la pantalla sea menor a 962px en la página de anécdotas usaremos para que se vea
+ul {
+  justify-content: center;
+}
+
+/*el media screen sirve para ajustar las propiedades de la web a pantallas
+más grandes o más pequeñas
+
+aunque usemos el grid layaut para las img, en este caso cuando la pantalla sea menor a 585px y mayor a 400px las imágenes son muy 
+grandes entonces modificamos el tamaño de las imágenes para poder visualizar mejor las img
 mejor las imágenes que nos redireccionan a otras páginas*/
-@media screen and (max-width: 962px) {
-  div {
-    display: block;
-    text-align: center;
+@media screen and (min-width: 400px) and (max-width: 585px) {
+  img {
+    width: 75%;
+    height: 75%;
+  }
+  h2 {
+    color: white !important;
+    font-size: 15px !important;
   }
 }
 
